@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<form action="/add">
+<form method="post" action="{{ url_for('add') }}">
  <ul>
   <li>First:<input type="text" name="first" value="0"></li>
   <li>Second:<input type="text" name="second" value="0"></li>

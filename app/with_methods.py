@@ -6,13 +6,13 @@ from app import app
 def index():
     return render_template("index.html")
 
-@app.route("/add/<int:first>/<int:second>")
-@app.route("/add")
+@app.route("/add/<int:first>/<int:second>", methods=["GET","POST"])
+@app.route("/add",methods=["GET","POST"])
 def add(first='',second=''):
     if first == '':
-        first = int(request.get("first"))
+        first = int(request.form.get("first"))
     if second == '':
-        second = int(request.get("second"))
+        second = int(request.form.get("second"))
     result = first + second
     return render_template("index.html",result=result)
 

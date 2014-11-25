@@ -3,7 +3,7 @@ from flask import render_template, request, redirect, url_for, jsonify, flash
 @app.route("/", methods=["GET","POST"])
 @app.route("/index", methods=["GET","POST"])
 def index():
-    return render_template("index.html")
+    return "index goes here"#render_template("index.html")
 
 @app.route("/add/<int:first>/<int:second>")
 @app.route("/add")
@@ -13,14 +13,14 @@ def add(first='',second=''):
     if second == '':
         second = int(request.get("second"))
     result = first + second
-    return render_template("index.html",result=result)
+    return "add"#render_template("index.html",result=result)
 
 @app.route("/check_length")
 def check_length():
     username = request.get("username")
     if len(username) > 15:
         flash("You entered a very long user name..Please reconsider your life choices")
-    
+    return "thing"
 @app.route("send_data")
 def send_data():
     data={"Eric Schles":"eric.schles@syncano.com",
@@ -30,4 +30,4 @@ def send_data():
           "hobbies":["guitar","rock climbing"],
           "friends":"everyone"
           }
-    return jsonify(data)
+    return "stuff"#jsonify(data)

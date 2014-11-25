@@ -1,0 +1,15 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/add">
+ <ul>
+  <li>First:<input type="text" name="first" value="0"></li>
+  <li>Second:<input type="text" name="second" value="0"></li>
+  <button type="submit">add numbers</button>
+ </ul>
+</form>
+<p id="addition_result"></p>
+
+{% endblock %}

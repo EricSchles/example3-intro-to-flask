@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Syncano is awesome</title>
+  </head>
+  <body>
+  
+	
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+        <li>{{ message }} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+
+<div class="footer">
+<p align="center">
+<!-- Change this some how -->
+	<a ></a> |
+	<a ></a> |
+	<a </a> |
+	<a ></a> |	
+	<a ></a>
+</p>	
+	Copyrights &copy;  All rights are reserved
+</div>
+</div>
+
+  </body>
+</html>

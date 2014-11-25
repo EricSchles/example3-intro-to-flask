@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Syncano is awesome</title>
+  </head>
+  <body>
+  
+   <div id="header"> 
+   <div class="nav">
+	
+    </div>
+   </div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+        <li>{{ message }} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+
+<div class="footer">
+<p align="center">
+<!-- Change this some how -->
+	<a href="http://www.a1escortsny.com/li-asian-escorts.htm">LI Asian Escorts</a> |
+	<a href="http://www.a1escortsny.com/manhattan-asian-escorts.htm">Manhattan Asian Escorts</a> |
+	<a href="http://www.a1escortsny.com/new-york-escorts.htm">NYC Escorts</a> |
+	<a href="http://www.a1escortsny.com/nyc-outcall-escorts.htm">New York Outcall Escots</a> |	
+	<a href="http://www.a1escortsny.com/sitemap.htm">Site Map</a>
+</p>	
+	Copyrights &copy; 2012 A1EscortsNY All rights are reserved
+</div>
+</div>
+
+  </body>
+</html>

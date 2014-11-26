@@ -16,12 +16,7 @@ def add(first='',second=''):
     result = first + second
     return render_template("index.html",result=result)
 
-@app.route("/check_length")
-def check_length():
-    username = request.get("username")
-    if len(username) > 15:
-        flash("You entered a very long user name..Please reconsider your life choices")
-    
+  
 
 @app.route("/send_data", methods=["GET","POST"])
 def send_data():
@@ -32,4 +27,4 @@ def send_data():
           "hobbies":["guitar","rock climbing"],
           "friends":"everyone"
           }
-    return jsonify(data)
+    return render_template("index.html",data=jsonify(data).get_data())

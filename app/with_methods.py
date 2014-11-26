@@ -27,4 +27,4 @@ def send_data():
           "hobbies":["guitar","rock climbing"],
           "friends":"everyone"
           }
-    return render_template("index.html",data=jsonify(data).get_data())
+    return jsonify(data)

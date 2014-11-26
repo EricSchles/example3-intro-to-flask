@@ -1,15 +1,29 @@
 <!-- extend base layout -->
-{% extends "base.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
 
-<form action="/add">
+<br />
+<br />
+<br />
+<br />
+<br />
+<div align="center">
+<form method="post" action="{{ url_for('add') }}">
  <ul>
-  <li>First:<input type="text" name="first" value="0"></li>
-  <li>Second:<input type="text" name="second" value="0"></li>
-  <button type="submit">add numbers</button>
+  <li>First:<input type="text" name="first" required></li>
+  <li>Second:<input type="text" name="second" required></li>
+  <br />
+ <br />  
+ <button type="submit">add numbers</button>
  </ul>
 </form>
-<p id="addition_result"></p>
+<p>{{ result }}</p>
 
+<br />
+<br />
+<form method="post" action="{{ url_for('send_data') }}">
+ <button type="submit">hit an api</button>
+</form>
+</div>
 {% endblock %}

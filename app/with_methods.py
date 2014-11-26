@@ -23,7 +23,7 @@ def check_length():
         flash("You entered a very long user name..Please reconsider your life choices")
     
 
-@app.route("/send_data")
+@app.route("/send_data", methods=["GET","POST"])
 def send_data():
     data={"Eric Schles":"eric.schles@syncano.com",
           "job":"developer evangelist",
